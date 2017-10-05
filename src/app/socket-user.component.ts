@@ -26,6 +26,11 @@ ngOnInit() {
     this.prev = this.current;
     //console.log("prev"+JSON.stringify(this.prev));
     if(this.prev){
+      
+      this.final = Object.keys(this.result).map((key) => {
+        return [key, this.result[key],this.prev[key] - this.result[key] < 0 ? 'UP' : 'DOWN'];
+      });
+
       for (let prevkey in this.prev){
         for (let currKey in this.current){
           if(prevkey == currKey){
@@ -35,9 +40,6 @@ ngOnInit() {
           }
         }
       }
-      this.final = Object.keys(this.result).map((key) => {
-        return [key, this.result[key]];
-      });
     }
 
     let rows = JSON.parse(message);
