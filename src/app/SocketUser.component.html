@@ -1,6 +1,6 @@
 
     <tr *ngFor="let row of final">    
         <td *ngFor="let cell of row">           
-          <b [ngClass]= "cell === 'DOWN' ? 'danger' : 'good'" >{{cell}}--</b>        
+          <b [ngClass]= "row.includes('DOWN') ? 'danger' : 'good'" >{{cell}}--</b>        
         </td>
       </tr>
