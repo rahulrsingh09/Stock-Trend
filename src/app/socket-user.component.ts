@@ -5,7 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'socket-user',
-  templateUrl: './SocketUser.component.html'
+  templateUrl: './SocketUser.component.html',
+  styleUrls: ['./SocketUser.component.css']
 })
 export class SocketUserComponent {
   private socketSubscription: Subscription
