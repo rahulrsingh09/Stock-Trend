@@ -1,7 +1,6 @@
 
     <tr *ngFor="let row of final">    
-        <td *ngFor="let cell of row">        
-          <div [ngStyle]="{'background-color': cell != 'DOWN', 'background-color': cell == 'DOWN'}" >SS</div>    
-          <b>{{cell}}--</b>        
+        <td *ngFor="let cell of row">           
+          <b [ngClass]= "cell === 'DOWN' ? 'danger' : 'good'" >{{cell}}--</b>        
         </td>
       </tr>
